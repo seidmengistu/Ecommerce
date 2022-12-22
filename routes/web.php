@@ -32,4 +32,5 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
     //Category Route
     Route::get('category',[App\Http\Controllers\Admin\CategoryController::class,'index']);
     Route::get('category/create',[App\Http\Controllers\Admin\CategoryController::class,'create']);
+    Route::Post('category',[App\Http\Controllers\Admin\CategoryController::class,'store']);
 });
